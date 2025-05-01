@@ -176,6 +176,7 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("TODO_APP", "=============== Application starting up ===============");
         prefs = getSharedPreferences("todo_prefs", MODE_PRIVATE);
         // Always follow system theme
         androidx.appcompat.app.AppCompatDelegate.setDefaultNightMode(androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
@@ -188,6 +189,11 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
 
         MaterialToolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        
+        // Set the app bar title to the display name
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(getString(R.string.app_name_display));
+        }
 
         // Use standard ImageView for theme toggle, notification, and language
         notificationIcon = findViewById(R.id.notificationIcon);
@@ -212,6 +218,12 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
 
         // Now it's safe to update the notification badge
         updateNotificationBadge();
+
+        // Set up empty state add button
+        View emptyStateAddButton = findViewById(R.id.emptyStateAddButton);
+        if (emptyStateAddButton != null) {
+            emptyStateAddButton.setOnClickListener(v -> showAddTaskDialog());
+        }
 
         // Reset filters and search after theme change
         if (searchInput != null) searchInput.setText("");
@@ -291,6 +303,17 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
         filterStatus = null;
         if (tabLayout.getTabCount() > 0) tabLayout.getTabAt(0).select();
         filterTasks();
+
+        // Force immediate empty state check at the end of onCreate
+        new Handler().postDelayed(() -> {
+            Log.d("TODO_APP", "Forcing empty state check");
+            if (taskList == null || taskList.isEmpty()) {
+                Log.d("TODO_APP", "Task list is null or empty after onCreate");
+            } else {
+                Log.d("TODO_APP", "Task list has " + taskList.size() + " items after onCreate");
+            }
+            updateEmptyState();
+        }, 500);
     }
 
     private void showAddTaskDialog() {
@@ -491,10 +514,31 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
 
     private void updateEmptyState() {
         View emptyStateContainer = findViewById(R.id.emptyStateContainer);
-        if (displayList.isEmpty()) {
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        
+        if (emptyStateContainer == null) {
+            Log.e("TODO_APP", "Empty state container view is null!");
+            return;
+        }
+        
+        if (taskList.isEmpty()) {
+            Log.d("TODO_APP", "Task list is empty, showing empty state");
             emptyStateContainer.setVisibility(View.VISIBLE);
+            if (recyclerView != null) {
+                recyclerView.setVisibility(View.GONE);
+            }
+        } else if (displayList.isEmpty() && !taskList.isEmpty()) {
+            Log.d("TODO_APP", "Display list is empty but task list has " + taskList.size() + " items. Showing empty state for filtered results");
+            emptyStateContainer.setVisibility(View.VISIBLE);
+            if (recyclerView != null) {
+                recyclerView.setVisibility(View.GONE);
+            }
         } else {
+            Log.d("TODO_APP", "Task list has " + taskList.size() + " items, display list has " + displayList.size() + " items. Hiding empty state");
             emptyStateContainer.setVisibility(View.GONE);
+            if (recyclerView != null) {
+                recyclerView.setVisibility(View.VISIBLE);
+            }
         }
     }
 
@@ -713,6 +757,9 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
             return true;
         } else if (id == R.id.action_test_notification) {
             testNotification();
+            return true;
+        } else if (id == R.id.action_clear_all) {
+            clearAllTasks();
             return true;
         } else {
             return super.onOptionsItemSelected(item);
@@ -1172,6 +1219,18 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
         disableMultiSelect();
         onTasksChanged();
         updateNotificationBadge(); // Ensure notification icon updates
+    }
+
+    // Helper method to clear all tasks for testing empty state UI
+    private void clearAllTasks() {
+        if (taskList != null) {
+            taskList.clear();
+            saveTasks();
+            displayList.clear();
+            adapter.notifyDataSetChanged();
+            updateEmptyState();
+            Log.d("TODO_APP", "All tasks cleared for testing empty state UI");
+        }
     }
 }
 

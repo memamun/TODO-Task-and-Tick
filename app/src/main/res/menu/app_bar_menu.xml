@@ -53,4 +53,8 @@
         android:title="@string/test_notification"
         app:showAsAction="never"
         android:contentDescription="@string/test_notification" />
+    <item
+        android:id="@+id/action_clear_all"
+        android:title="@string/clear_all_tasks"
+        app:showAsAction="never" />
 </menu> 

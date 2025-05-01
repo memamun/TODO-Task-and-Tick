@@ -105,19 +105,18 @@
             <LinearLayout
                 android:id="@+id/emptyStateContainer"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:gravity="center"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="120dp"
-                android:visibility="gone">
+                android:layout_gravity="center"
+                android:background="?android:colorBackground"
+                android:visibility="visible">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@android:drawable/ic_menu_info_details"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:src="@drawable/icon_task_empty"
                     app:tint="?attr/colorPrimary"
-                    android:alpha="0.7"
                     android:contentDescription="@string/empty_state"/>
 
                 <TextView
@@ -125,22 +124,31 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/empty_state"
-                    android:textSize="18sp"
+                    android:textSize="24sp"
                     android:fontFamily="sans-serif-medium"
-                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:textColor="?attr/colorOnSurface"
                     android:gravity="center"
-                    android:layout_marginTop="16dp"
-                    android:alpha="0.8"/>
+                    android:layout_marginTop="24dp"
+                    android:layout_marginHorizontal="24dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/empty_state_subtitle"
-                    android:textSize="14sp"
+                    android:textSize="16sp"
                     android:textColor="?attr/colorOnSurfaceVariant"
                     android:gravity="center"
-                    android:layout_marginTop="8dp"
-                    android:alpha="0.6"/>
+                    android:layout_marginTop="12dp"
+                    android:layout_marginHorizontal="32dp"/>
+                
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/emptyStateAddButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_first_task"
+                    android:layout_marginTop="32dp"
+                    app:icon="@android:drawable/ic_input_add"
+                    style="@style/Widget.Material3.Button"/>
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView

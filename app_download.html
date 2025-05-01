@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App - Download</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #6200ee;
+            color: white;
+            margin-bottom: 40px;
+            border-radius: 0 0 10px 10px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .app-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .app-screenshot {
+            flex: 1;
+            min-width: 300px;
+        }
+        .app-screenshot img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .app-description {
+            flex: 1;
+            min-width: 300px;
+        }
+        .download-section {
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .download-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #6200ee;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            transition: background-color 0.3s;
+        }
+        .download-button:hover {
+            background-color: #3700b3;
+        }
+        .features {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        .features h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+        .features ul {
+            columns: 2;
+            column-gap: 40px;
+        }
+        .qr-code {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .qr-code img {
+            max-width: 200px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: white;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 600px) {
+            .features ul {
+                columns: 1;
+            }
+            .download-section {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Todo App</h1>
+            <p>A modern, feature-rich task management application for Android</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="app-info">
+            <div class="app-screenshot">
+                <!-- Replace with actual screenshot of your app -->
+                <img src="https://placehold.co/400x800/6200ee/ffffff?text=Todo+App+Screenshot" alt="Todo App Screenshot">
+            </div>
+            <div class="app-description">
+                <h2>Manage Your Tasks Effectively</h2>
+                <p>Todo App is a powerful task management tool designed to help you organize your daily activities, set priorities, and never miss a deadline.</p>
+                <p>With our intuitive interface and powerful features, you can easily create, edit, and organize tasks across different categories and priority levels.</p>
+                <p>Support for both English and Bengali languages makes it accessible to a wider audience.</p>
+            </div>
+        </div>
+        
+        <div class="features">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Create, edit, and delete tasks</li>
+                <li>Set priority levels (High, Medium, Low)</li>
+                <li>Categorize tasks</li>
+                <li>Due date scheduling</li>
+                <li>Dark mode support</li>
+                <li>Multi-language support (English and Bengali)</li>
+                <li>Multi-select functionality</li>
+                <li>Task import/export</li>
+                <li>Overdue task notifications</li>
+                <li>Filter and search capabilities</li>
+            </ul>
+        </div>
+        
+        <div class="download-section">
+            <h2>Download Now</h2>
+            <p>Get the latest version of Todo App for your Android device</p>
+            <a href="app-release.apk" class="download-button" download>Download APK</a>
+            <p><small>Version 1.0.0 | Size: 2.3 MB | Android 7.0+ required</small></p>
+            
+            <div class="install-instructions">
+                <h3>Installation Instructions</h3>
+                <ol>
+                    <li>Download the APK file</li>
+                    <li>On your device, go to <strong>Settings > Security</strong></li>
+                    <li>Enable <strong>"Install from Unknown Sources"</strong></li>
+                    <li>Open the downloaded APK file to install</li>
+                </ol>
+            </div>
+            
+            <div class="qr-code">
+                <p>Or scan this QR code to download directly to your device</p>
+                <!-- Replace with an actual QR code for your download link -->
+                <img src="https://placehold.co/200x200/ffffff/000000?text=Download+QR" alt="Download QR Code">
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MamunWrites. All rights reserved.</p>
+            <p>Contact: <a href="mailto:support@mamunwrites.com">support@mamunwrites.com</a></p>
+        </div>
+    </footer>
+</body>
+</html> 

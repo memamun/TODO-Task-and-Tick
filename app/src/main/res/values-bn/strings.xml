@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">কাজের তালিকা</string>
+    <string name="app_name">TODO</string>
+    <string name="app_name_display">টুডু - টাস্ক এবং টিক</string>
     <string name="privacy_policy">গোপনীয়তা নীতি</string>
     <string name="privacy_policy_title">গোপনীয়তা নীতি</string>
     <string name="privacy_effective_date">কার্যকর তারিখ: ১ মে, ২০২৫</string>
-    <string name="privacy_intro">এই অ্যাপ ("কাজের তালিকা") আপনার গোপনীয়তা রক্ষার জন্য প্রতিশ্রুতিবদ্ধ। আপনার তথ্য কীভাবে পরিচালিত হয় তা জানতে নিচের নীতিমালা পড়ুন।</string>
+    <string name="privacy_intro">এই অ্যাপ ("টুডু - টাস্ক এবং টিক") আপনার গোপনীয়তা রক্ষার জন্য প্রতিশ্রুতিবদ্ধ। আপনার তথ্য কীভাবে পরিচালিত হয় তা জানতে নিচের নীতিমালা পড়ুন।</string>
     
     <string name="privacy_data_collection_title">তথ্য সংগ্রহ</string>
     <string name="privacy_data_collection">• এই অ্যাপ কোনো ব্যক্তিগত তথ্য সংগ্রহ, সংরক্ষণ বা প্রেরণ করে না।\n• আপনার সব টাস্ক ও তথ্য শুধুমাত্র আপনার ডিভাইসে সংরক্ষিত থাকে।\n• কোনো অ্যানালিটিক্স, বিজ্ঞাপন বা তৃতীয় পক্ষের ট্র্যাকিং ব্যবহৃত হয় না।</string>
@@ -41,15 +42,16 @@
     
     <string name="developer_info">ডেভেলপার তথ্য</string>
     <string name="share_app">অ্যাপ শেয়ার করুন</string>
-    <string name="share_app_text">এই টু-ডু অ্যাপটি ব্যবহার করে দেখুন!</string>
+    <string name="share_app_text">এই অ্যাপটি দেখুন: টুডু - টাস্ক এবং টিক!</string>
     <string name="notifications">নোটিফিকেশন</string>
     <string name="night_mode">নাইট মোড</string>
     <string name="switch_to_english">Switch to English</string>
     <string name="switch_to_bengali">বাংলায় যান</string>
-    <string name="title_todo_list">আমার টু-ডু তালিকা</string>
-    <string name="empty_state">এখনো কোনো টাস্ক নেই। একটি যোগ করুন!</string>
-    <string name="empty_state_subtitle">নতুন টাস্ক তৈরি করতে নীচের + বাটন টিপুন</string>
-    <string name="search_hint">এখানে টাস্ক খুঁজুন...</string>
+    <string name="title_todo_list">টুডু - টাস্ক এবং টিক</string>
+    <string name="empty_state">আপনার এখনও কোনো কাজ নেই</string>
+    <string name="empty_state_subtitle">আপনার প্রথম কাজ তৈরি করুন এবং আপনার দিন দক্ষতার সাথে সংগঠিত করা শুরু করুন</string>
+    <string name="add_first_task">আপনার প্রথম কাজ যোগ করুন</string>
+    <string name="search_hint">কাজ খুঁজুন...</string>
     <string name="recycler_content_desc">টাস্ক তালিকা। ডান/বামে সোয়াইপ করুন মুছতে, ট্যাপ করুন এডিট করতে, চেক করুন সম্পন্ন করতে।</string>
     <string name="recycler_content_desc_simple">টাস্ক তালিকা।</string>
     <string name="add_task"></string>
@@ -99,14 +101,15 @@
     <string name="developer_name">মামুন আবদুল্লাহ</string>
     <string name="developer_title">অ্যান্ড্রয়েড ডেভেলপার</string>
     <string name="app_info_title">অ্যাপ তথ্য</string>
-    <string name="app_name_with_desc">কাজের তালিকা - টাস্ক ম্যানেজার</string>
+    <string name="app_name_with_desc">টুডু - টাস্ক এবং টিক</string>
     <string name="app_description">একটি আধুনিক, ব্যবহারে সহজ টাস্ক ম্যানেজমেন্ট অ্যাপ যা আপনাকে সংগঠিত ও উৎপাদনশীল থাকতে সাহায্য করে। বৈশিষ্ট্যগুলোর মধ্যে রয়েছে টাস্ক ক্যাটাগরি, অগ্রাধিকার, শেষ তারিখ, এবং নোটিফিকেশন।</string>
     <string name="support_feedback_title">সহায়তা ও মতামত</string>
     <string name="support_info">সহায়তা, নতুন বৈশিষ্ট্য অনুরোধ, বা বাগ রিপোর্ট করার জন্য, অনুগ্রহ করে ইমেইল মাধ্যমে আমাদের সাথে যোগাযোগ করুন। আমরা আপনার গোপনীয়তা এবং মতামত মূল্যায়ন করি!</string>
     <string name="website_button">ওয়েবসাইট</string>
     <string name="feedback_button">মতামত পাঠান</string>
-    <string name="thanks_message">কাজের তালিকা ব্যবহার করার জন্য ধন্যবাদ!</string>
-    <string name="email_subject">কাজের তালিকা অ্যাপ সম্পর্কে</string>
-    <string name="feedback_subject">মতামত: কাজের তালিকা অ্যাপ</string>
-    <string name="feedback_text">আমি কাজের তালিকা অ্যাপ সম্পর্কে নিম্নলিখিত মতামত দিতে চাই:\n\n</string>
+    <string name="thanks_message">টুডু - টাস্ক এবং টিক ব্যবহার করার জন্য ধন্যবাদ!</string>
+    <string name="email_subject">টুডু - টাস্ক এবং টিক অ্যাপ সম্পর্কে</string>
+    <string name="feedback_subject">মতামত: টুডু - টাস্ক এবং টিক অ্যাপ</string>
+    <string name="feedback_text">আমি টুডু - টাস্ক এবং টিক অ্যাপ সম্পর্কে নিম্নলিখিত মতামত দিতে চাই:\n\n</string>
+    <string name="clear_all_tasks">সব টাস্ক মুছুন</string>
 </resources> 

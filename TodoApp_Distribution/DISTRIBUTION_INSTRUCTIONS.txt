@@ -1,0 +1,22 @@
+# Todo App Distribution Package
+
+This folder contains files needed to distribute the Todo App.
+
+## Contents:
+- app-release.apk - The signed APK file to distribute
+- index.html - The download page that users will see
+- download_qr.png - A QR code for easy downloading (placeholder - update with your actual URL)
+- screenshots/ - Directory for app screenshots
+
+## Publishing Instructions:
+1. Upload all contents to your web hosting provider
+2. Ensure your web server is configured to serve .apk files with the correct MIME type
+   Add this to your .htaccess file if needed: 
+   AddType application/vnd.android.package-archive .apk
+3. After uploading, update the QR code to point to your actual hosted APK URL
+4. Share the website URL with your users
+
+## Alternative Distribution Methods:
+- Email the APK directly to users
+- Share through cloud storage (Dropbox, Google Drive, etc.)
+- Upload to alternative app stores (see README.md for more details)
