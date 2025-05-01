@@ -1,6 +1,52 @@
-# Todo App
+# TODO - Task & Tick
 
-A modern, feature-rich Todo application for Android.
+A modern, feature-rich Todo application for Android with task management, categories, priorities, and more.
+
+<div align="center">
+    <img src="screenshots/Screenshot_20250502_045521_TODO.jpg" alt="Task List" width="250"/>
+    <img src="screenshots/Screenshot_20250502_045728_TODO.jpg" alt="Add Task" width="250"/>
+    <img src="screenshots/Screenshot_20250502_045747_TODO.jpg" alt="Notifications" width="250"/>
+</div>
+
+## Features
+
+- **Task Management**: Create, edit, and delete tasks with ease
+- **Categories**: Organize tasks by categories (Work, Personal, Urgent, Shopping, Other)
+- **Priority Levels**: Assign High, Medium, or Low priority to tasks
+- **Due Dates**: Set and track task deadlines
+- **Filtering**: Filter tasks by category, priority, or completion status
+- **Search**: Search through tasks instantly
+- **Multi-Select**: Select multiple tasks for bulk operations
+- **Dark Mode**: Full support for light and dark themes
+- **Multi-Language Support**: Available in English and Bengali
+- **Notifications**: Get reminders for overdue tasks
+- **Data Import/Export**: Back up and restore your tasks
+
+## Screenshots
+
+<div align="center">
+    <img src="screenshots/Screenshot_20250502_045607_TODO.jpg" alt="Empty State" width="200"/>
+    <img src="screenshots/Screenshot_20250502_045634_TODO.jpg" alt="Tasks List" width="200"/>
+    <img src="screenshots/Screenshot_20250502_045656_TODO.jpg" alt="Filtering" width="200"/>
+    <img src="screenshots/Screenshot_20250502_045712_TODO.jpg" alt="Dark Mode" width="200"/>
+</div>
+
+<div align="center">
+    <img src="screenshots/Screenshot_20250502_045722_TODO.jpg" alt="Task Dialog" width="200"/>
+    <img src="screenshots/Screenshot_20250502_050316_TODO.jpg" alt="Developer Info" width="200"/>
+    <img src="screenshots/Screenshot_20250502_050341_TODO.jpg" alt="Privacy Policy" width="200"/>
+    <img src="screenshots/Screenshot_20250502_050353_TODO.jpg" alt="Menu Options" width="200"/>
+</div>
+
+## Installation
+
+### Download APK
+Download the latest release APK from the [Releases](../../releases) section.
+
+### Build from Source
+- Clone this repository
+- Open in Android Studio
+- Build and run
 
 ## Building the App
 
@@ -25,102 +71,6 @@ To build a signed release version of the app, run:
 
 The signed release APK will be generated at `app/build/outputs/apk/release/app-release.apk`
 
-## Publishing to Alternative App Stores
-
-If you don't have access to the Google Play Store, here are some popular alternatives:
-
-### Amazon Appstore
-1. Create an [Amazon Developer account](https://developer.amazon.com/)
-2. Click "Add new app" in the developer console
-3. Fill in app details (title, description, category)
-4. Upload your APK file
-5. Set pricing and availability
-6. Submit for review
-
-### Samsung Galaxy Store
-1. Register as a seller on [Samsung Galaxy Store Seller Portal](https://seller.samsungapps.com/)
-2. Create a new application
-3. Upload your APK file
-4. Fill in app details and set pricing
-5. Submit for review
-
-### Huawei AppGallery
-1. Register at the [Huawei Developer Console](https://developer.huawei.com/consumer/en/console)
-2. Create a new app
-3. Upload your APK file
-4. Complete app information
-5. Submit for review
-
-### APKPure
-1. Create an account on [APKPure](https://developer.apkpure.com/)
-2. Submit your APK
-3. Provide app metadata (title, description, screenshots)
-4. Get approved and published
-
-### F-Droid (For Open Source Apps)
-1. If your app is open source, you can submit it to [F-Droid](https://f-droid.org/docs/Inclusion_Policy/)
-2. Make your source code available on a public Git repository
-3. Submit your app for inclusion
-4. F-Droid will build and distribute your app
-
-### Direct APK Distribution
-You can also distribute your APK file directly:
-1. Host the APK file on your website or file hosting service
-2. Create a QR code linking to the download URL
-3. Share the link or QR code with potential users
-4. Users will need to enable "Install from unknown sources" in their device settings
-
-## Publishing to Google Play Store
-
-### Step 1: Create a Google Play Developer Account
-1. Visit the [Google Play Console](https://play.google.com/console/signup)
-2. Pay the one-time $25 registration fee
-3. Complete the account details
-
-### Step 2: Prepare Store Listing
-Prepare the following assets for your app listing:
-- App title: "Todo App"
-- Short description (up to 80 characters)
-- Full description (up to 4000 characters)
-- App icon (512x512 PNG)
-- Feature graphic (1024x500 JPG or PNG)
-- At least 2 screenshots for each supported device type (phone, tablet)
-- Privacy policy URL
-
-### Step 3: Create a New App
-1. Log in to the [Google Play Console](https://play.google.com/console)
-2. Click "Create app"
-3. Enter app details (name, default language, app/game, free/paid)
-4. Confirm developer program policies and US export laws
-
-### Step 4: Complete the Store Listing
-1. Navigate to "Store presence" > "Store listing"
-2. Fill in all required information and upload screenshots, feature graphics, and app icon
-3. Save the draft
-
-### Step 5: Set Up App Content Rating
-1. Go to "Content rating" section
-2. Complete the questionnaire about your app's content
-3. Submit for rating
-
-### Step 6: Set Up Pricing and Distribution
-1. Go to "Pricing & distribution"
-2. Select app availability (countries)
-3. Select Free or Paid
-4. Answer the distribution questions
-5. Save the draft
-
-### Step 7: Upload the Release APK
-1. Go to "Production" > "Create new release"
-2. Upload the signed APK (`app/build/outputs/apk/release/app-release.apk`)
-3. Add release notes
-4. Save and review the release
-
-### Step 8: Rollout to Production
-1. Click "Start rollout to production"
-2. Google Play will review your app (typically takes a few days)
-3. Once approved, your app will be available in the Google Play Store
-
 ## App Bundle (Alternative to APK)
 Google Play prefers Android App Bundles over APKs. To generate an AAB file:
 ```
@@ -139,13 +89,23 @@ The app is signed with the following keystore:
 
 **Important**: Keep this keystore file secure. If you lose it, you won't be able to update your app on the Play Store.
 
-## Features
-- Task creation, editing, and deletion
-- Priority management
-- Due date scheduling
-- Category filtering
-- Multi-language support (English and Bengali)
-- Dark mode support
-- Multi-select functionality
-- Task import/export
-- Overdue task notifications 
+## Publishing to Google Play Store
+
+For detailed instructions on publishing to the Google Play Store, see the [PUBLISHING.md](PUBLISHING.md) guide.
+
+## Alternative App Stores
+
+For instructions on publishing to alternative app stores, see the [ALTERNATIVE_STORES.md](ALTERNATIVE_STORES.md) guide.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Contact
+
+If you have any questions or suggestions, please reach out:
+- Email: support@mamunwrites.com 
