@@ -1,31 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="8dp"
-    android:gravity="center_vertical">
+    android:paddingVertical="10dp">
 
     <View
         android:id="@+id/priority_indicator"
-        android:layout_width="12dp"
-        android:layout_height="12dp"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
         android:background="@drawable/circle_shape"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/notification_task_text"
+        app:layout_constraintBottom_toBottomOf="@id/notification_task_text" />
 
     <TextView
         android:id="@+id/notification_task_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:textSize="14sp" />
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintStart_toEndOf="@id/priority_indicator"
+        app:layout_constraintEnd_toStartOf="@id/notification_task_date"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Complete project report" />
 
     <TextView
         android:id="@+id/notification_task_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="12sp"
+        android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+        android:textColor="?attr/colorPrimary"
         android:textStyle="italic"
-        android:layout_marginStart="8dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/notification_task_text"
+        app:layout_constraintBottom_toBottomOf="@id/notification_task_text"
+        tools:text="2023-06-15" />
 
-</LinearLayout> 
+</androidx.constraintlayout.widget.ConstraintLayout> 

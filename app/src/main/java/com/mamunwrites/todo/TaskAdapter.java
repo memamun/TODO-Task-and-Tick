@@ -100,12 +100,13 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
             if (multiSelectMode) {
                 if (selectedPositions.contains(position)) {
                     selectedPositions.remove((Integer) position);
-                    notifyItemChanged(position);
                 } else {
                     selectedPositions.add(position);
-                    notifyItemChanged(position);
                 }
-                if (selectionChangedListener != null) selectionChangedListener.onSelectionChanged();
+                notifyItemChanged(position);
+                if (selectionChangedListener != null) {
+                    selectionChangedListener.onSelectionChanged();
+                }
             } else if (onTaskClickListener != null) {
                 onTaskClickListener.onTaskClick(position);
             }

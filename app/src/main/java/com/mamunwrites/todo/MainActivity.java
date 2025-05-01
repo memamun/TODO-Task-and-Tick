@@ -69,6 +69,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import android.graphics.Rect;
 import androidx.appcompat.view.ActionMode;
 import android.app.NotificationManager;
+import android.view.ViewGroup;
 
 public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTaskContextMenuListener {
     private TaskAdapter adapter;
@@ -647,12 +648,13 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
     // Bulk actions
     private void updateActionModeTitle() {
         if (actionMode != null) {
-            int count = adapter.getItemCount();
+            int count = adapter.getSelectedTasks().size();
             actionMode.setTitle(count + " selected");
         }
     }
 
     private void enableMultiSelect() {
+        adapter.setMultiSelectMode(true);
         adapter.setSelectedPositions(new ArrayList<>());
         if (actionMode == null) {
             actionMode = startSupportActionMode(actionModeCallback);
@@ -662,6 +664,7 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
     }
 
     private void disableMultiSelect() {
+        adapter.setMultiSelectMode(false);
         adapter.setSelectedPositions(new ArrayList<>());
         if (actionMode != null) {
             actionMode.finish();
@@ -783,6 +786,10 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
         // Show a badge if there are any due tasks (not done and due date today or earlier)
         boolean hasDue = false;
         Calendar today = Calendar.getInstance();
+        today.set(Calendar.HOUR_OF_DAY, 0);
+        today.set(Calendar.MINUTE, 0);
+        today.set(Calendar.SECOND, 0);
+        today.set(Calendar.MILLISECOND, 0);
         
         // Debug count of overdue tasks
         int overdueTasks = 0;
@@ -797,7 +804,7 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
                     int d = Integer.parseInt(parts[2]);
                     Calendar due = Calendar.getInstance();
                     due.set(y, m, d, 0, 0, 0);
-                    due.set(Calendar.DAY_OF_MONTH, 1);
+                    due.set(Calendar.MILLISECOND, 0);
                     if (!due.after(today)) {
                         hasDue = true;
                         overdueTasks++;
@@ -969,6 +976,9 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         View dialogView = getLayoutInflater().inflate(R.layout.floating_notification, null);
         
+        // Set the view to the builder
+        builder.setView(dialogView);
+        
         // Set up the RecyclerView
         RecyclerView recyclerView = dialogView.findViewById(R.id.notification_tasks_recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -977,6 +987,12 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
         
         // Create and show the dialog
         AlertDialog dialog = builder.create();
+        
+        // Customize dialog appearance
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        }
         
         // Set up dismiss button
         Button dismissButton = dialogView.findViewById(R.id.notification_dismiss_button);
