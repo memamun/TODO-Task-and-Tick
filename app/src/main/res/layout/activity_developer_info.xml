@@ -19,9 +19,9 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorSurface"
+        android:background="?attr/colorSurface"
             app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-            app:title="@string/developer_info"
+        app:title="@string/developer_info"
             app:titleTextColor="?attr/colorOnSurface" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -149,9 +149,9 @@
                 app:layout_constraintTop_toBottomOf="@id/profileCard">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
                     android:padding="16dp">
 
                     <TextView
@@ -170,7 +170,7 @@
                         android:textColor="?attr/colorOnSurface"
                         android:textStyle="bold" />
 
-                    <TextView
+            <TextView
                         android:id="@+id/appDescription"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
