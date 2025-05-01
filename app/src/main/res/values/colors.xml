@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Material 3 color scheme -->
+    <color name="md_primary">#FF6750A4</color>
+    <color name="md_on_primary">#FFFFFFFF</color>
+    <color name="md_primary_container">#FFE9DDFF</color>
+    <color name="md_on_primary_container">#FF22005D</color>
+    
+    <color name="md_secondary">#FF625B71</color>
+    <color name="md_on_secondary">#FFFFFFFF</color>
+    <color name="md_secondary_container">#FFE8DEF8</color>
+    <color name="md_on_secondary_container">#FF1E192B</color>
+    
+    <color name="md_tertiary">#FF7E5260</color>
+    <color name="md_on_tertiary">#FFFFFFFF</color>
+    <color name="md_tertiary_container">#FFFFD9E3</color>
+    <color name="md_on_tertiary_container">#FF31111D</color>
+    
+    <color name="md_error">#FFB3261E</color>
+    <color name="md_on_error">#FFFFFFFF</color>
+    <color name="md_error_container">#FFF9DEDC</color>
+    <color name="md_on_error_container">#FF410E0B</color>
+    
+    <color name="md_surface">#FFF7F2FA</color>
+    <color name="md_on_surface">#FF1C1B1F</color>
+    <color name="md_surface_variant">#FFE7E0EC</color>
+    <color name="md_on_surface_variant">#FF49454E</color>
+    
+    <color name="md_background">#FFFDF8FF</color>
+    <color name="md_on_background">#FF1C1B1F</color>
+    
+    <!-- Task Item Colors -->
+    <color name="selection_highlight">#1A2196F3</color>
+    <color name="date_background">#12757575</color>
+    <color name="date_text">#757575</color>
+    <color name="overdue_background">#1AF44336</color>
+    <color name="overdue_text">#F44336</color>
+    
+    <!-- Priority Colors -->
+    <color name="priority_high">#F44336</color>
+    <color name="priority_medium">#FF9800</color>
+    <color name="priority_low">#4CAF50</color>
+</resources>

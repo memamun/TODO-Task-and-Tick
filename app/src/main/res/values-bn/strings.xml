@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">কাজের তালিকা</string>
+    <string name="privacy_policy">গোপনীয়তা নীতি</string>
+    <string name="developer_info">ডেভেলপার তথ্য</string>
+    <string name="share_app">অ্যাপ শেয়ার করুন</string>
+    <string name="privacy_policy_text">কার্যকর তারিখ: ১ মে, ২০২৫\n\nএই অ্যাপ ("কাজের তালিকা") আপনার গোপনীয়তা রক্ষার জন্য প্রতিশ্রুতিবদ্ধ। আপনার তথ্য কীভাবে পরিচালিত হয় তা জানতে নিচের নীতিমালা পড়ুন।\n\n<b>১. তথ্য সংগ্রহ</b>\n• এই অ্যাপ কোনো ব্যক্তিগত তথ্য সংগ্রহ, সংরক্ষণ বা প্রেরণ করে না।\n• আপনার সব টাস্ক ও তথ্য শুধুমাত্র আপনার ডিভাইসে সংরক্ষিত থাকে।\n• কোনো অ্যানালিটিক্স, বিজ্ঞাপন বা তৃতীয় পক্ষের ট্র্যাকিং ব্যবহৃত হয় না।\n\n<b>২. অনুমতি</b>\n• অ্যাপটি আপনাকে টাস্কের নোটিফিকেশন দিতে নোটিফিকেশন অনুমতি চাইতে পারে। এটি ঐচ্ছিক এবং শুধুমাত্র লোকাল নোটিফিকেশনের জন্য ব্যবহৃত হয়।\n• অন্য কোনো সংবেদনশীল অনুমতি প্রয়োজন হয় না বা ব্যবহৃত হয় না।\n\n<b>৩. তথ্য শেয়ারিং</b>\n• আপনার তথ্য কোনো তৃতীয় পক্ষের সাথে শেয়ার করা হয় না।\n• কোনো তথ্য আপলোড, বিক্রি বা ডিভাইসের বাইরে স্থানান্তর করা হয় না।\n\n<b>৪. শিশুদের গোপনীয়তা</b>\n• এই অ্যাপ সব বয়সের জন্য উপযুক্ত এবং ১৩ বছরের কম বয়সী শিশুদের কাছ থেকে তথ্য সংগ্রহ করে না।\n\n<b>৫. নিরাপত্তা</b>\n• আপনার তথ্য আপনার ডিভাইসে নিরাপদে সংরক্ষিত থাকে। অতিরিক্ত নিরাপত্তার জন্য ডিভাইসের পিন, ফিঙ্গারপ্রিন্ট ইত্যাদি ব্যবহার করার পরামর্শ দেওয়া হয়।\n\n<b>৬. যোগাযোগ</b>\n• এই গোপনীয়তা নীতি সম্পর্কে কোনো প্রশ্ন বা উদ্বেগ থাকলে, দয়া করে ডেভেলপারকে <b>support@mamunwrites.com</b> এ ইমেইল করুন।\n\nএই অ্যাপ ব্যবহার করে আপনি এই গোপনীয়তা নীতিতে সম্মত হচ্ছেন। নীতিমালা সময়ে সময়ে আপডেট হতে পারে। দয়া করে নিয়মিত পর্যালোচনা করুন।</string>
+    <string name="developer_info_text"><b>অ্যাপ</b>: কাজের তালিকা\n<b>ডেভেলপার</b>: মামুন আবদুল্লাহ\n<b>পদবী</b>: অ্যান্ড্রয়েড ডেভেলপার\n<b>ইমেইল</b>: support@mamunwrites.com\n<b>ওয়েবসাইট</b>: https://mamunwrites.com\n\n<b>সহায়তা ও মতামত:</b>\n• সহায়তা, ফিচার রিকোয়েস্ট বা বাগ রিপোর্টের জন্য উপরের ইমেইল বা ওয়েবসাইটে যোগাযোগ করুন।\n• আমরা আপনার গোপনীয়তা ও মতামতকে গুরুত্ব দিই!\n\nকাজের তালিকা ব্যবহারের জন্য ধন্যবাদ!</string>
+    <string name="share_app_text">এই টু-ডু অ্যাপটি ব্যবহার করে দেখুন!</string>
+    <string name="notifications">নোটিফিকেশন</string>
+    <string name="night_mode">নাইট মোড</string>
+    <string name="switch_to_english">Switch to English</string>
+    <string name="switch_to_bengali">বাংলায় যান</string>
+    <string name="title_todo_list">আমার টু-ডু তালিকা</string>
+    <string name="empty_state">এখনো কোনো টাস্ক নেই। একটি যোগ করুন!</string>
+    <string name="empty_state_subtitle">নতুন টাস্ক তৈরি করতে নীচের + বাটন টিপুন</string>
+    <string name="search_hint">এখানে টাস্ক খুঁজুন...</string>
+    <string name="recycler_content_desc">টাস্ক তালিকা। ডান/বামে সোয়াইপ করুন মুছতে, ট্যাপ করুন এডিট করতে, চেক করুন সম্পন্ন করতে।</string>
+    <string name="recycler_content_desc_simple">টাস্ক তালিকা।</string>
+    <string name="add_task"></string>
+    <string name="filter_all">সব</string>
+    <string name="filter_done">সম্পন্ন</string>
+    <string name="filter_active">চলমান</string>
+    <string name="category_work">কাজ</string>
+    <string name="category_personal">ব্যক্তিগত</string>
+    <string name="category_urgent">জরুরি</string>
+    <string name="category_shopping">কেনাকাটা</string>
+    <string name="category_other">অন্যান্য</string>
+    <string name="priority_high">উচ্চ</string>
+    <string name="priority_medium">মাঝারি</string>
+    <string name="priority_low">নিম্ন</string>
+    
+    <!-- Dialog strings -->
+    <string name="dialog_add_task">টাস্ক যোগ করুন</string>
+    <string name="dialog_edit_task">টাস্ক সম্পাদনা করুন</string>
+    <string name="dialog_task_description">টাস্ক বিবরণ</string>
+    <string name="dialog_pick_due_date">তারিখ নির্বাচন করুন</string>
+    <string name="dialog_add">যোগ করুন</string>
+    <string name="dialog_save">সংরক্ষণ করুন</string>
+    <string name="dialog_cancel">বাতিল করুন</string>
+    <string name="dialog_task_deleted">টাস্ক মুছে ফেলা হয়েছে</string>
+    <string name="dialog_undo">পূর্বাবস্থায় ফিরুন</string>
+    
+    <!-- Menu items -->
+    <string name="change_language">ভাষা পরিবর্তন করুন</string>
+    <string name="export_tasks">টাস্ক এক্সপোর্ট করুন</string>
+    <string name="import_tasks">টাস্ক ইম্পোর্ট করুন</string>
+    <string name="toggle_theme">থিম পরিবর্তন করুন</string>
+    <string name="multiselect">একাধিক নির্বাচন</string>
+    <string name="delete_selected">নির্বাচিত মুছুন</string>
+    <string name="mark_done">নির্বাচিত সম্পন্ন করুন</string>
+    <string name="test_notification">নোটিফিকেশন পরীক্ষা করুন</string>
+    
+    <!-- Notification strings -->
+    <string name="notification_title">বিলম্বিত টাস্ক</string>
+    <string name="notification_dismiss">বন্ধ করুন</string>
+    <string name="notification_empty">কোন বিলম্বিত টাস্ক নেই</string>
+    
+    <!-- Task dialog labels -->
+    <string name="category_label">বিভাগ</string>
+    <string name="priority_label">অগ্রাধিকার</string>
+</resources> 

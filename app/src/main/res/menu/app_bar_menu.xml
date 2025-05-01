@@ -1,0 +1,56 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_share_app"
+        android:title="@string/share_app"
+        android:icon="@drawable/ic_share_24"
+        app:showAsAction="never"
+        android:contentDescription="@string/share_app" />
+    <item
+        android:id="@+id/action_export"
+        android:title="@string/export_tasks"
+        app:showAsAction="never"
+        android:contentDescription="@string/export_tasks" />
+    <item
+        android:id="@+id/action_import"
+        android:title="@string/import_tasks"
+        app:showAsAction="never"
+        android:contentDescription="@string/import_tasks" />
+    <item
+        android:id="@+id/action_privacy_policy"
+        android:title="@string/privacy_policy"
+        android:icon="@drawable/ic_privacy_24"
+        app:showAsAction="never"
+        android:contentDescription="@string/privacy_policy" />
+    <item
+        android:id="@+id/action_developer_info"
+        android:title="@string/developer_info"
+        android:icon="@drawable/ic_developer_24"
+        app:showAsAction="never"
+        android:contentDescription="@string/developer_info" />
+    <item
+        android:id="@+id/action_multiselect"
+        android:title="@string/multiselect"
+        app:showAsAction="never"
+        android:contentDescription="@string/multiselect" />
+    <item
+        android:id="@+id/action_delete_selected"
+        android:title="@string/delete_selected"
+        app:showAsAction="never"
+        android:contentDescription="@string/delete_selected" />
+    <item
+        android:id="@+id/action_mark_done"
+        android:title="@string/mark_done"
+        app:showAsAction="never"
+        android:contentDescription="@string/mark_done" />
+    <item
+        android:id="@+id/action_change_language"
+        android:title="@string/change_language"
+        app:showAsAction="never"
+        android:contentDescription="@string/change_language" />
+    <item
+        android:id="@+id/action_test_notification"
+        android:title="@string/test_notification"
+        app:showAsAction="never"
+        android:contentDescription="@string/test_notification" />
+</menu> 
