@@ -1,4 +1,6 @@
-package com.example.exam;
+package com.mamunwrites.todo;
+
+import com.mamunwrites.todo.R;
 
 import android.os.Bundle;
 import android.view.View;
@@ -66,6 +68,7 @@ import android.widget.Button;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import android.graphics.Rect;
 import androidx.appcompat.view.ActionMode;
+import android.app.NotificationManager;
 
 public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTaskContextMenuListener {
     private TaskAdapter adapter;
@@ -95,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
     private static final String LANGUAGE_BN = "bn";
     private ImageView notificationIcon;
     private String currentLanguage;
+    private ActionMode actionMode;
     
     // Activity Result Launchers to replace deprecated startActivityForResult
     private final ActivityResultLauncher<Intent> exportLauncher = registerForActivityResult(
@@ -134,6 +138,41 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
                 }
             });
 
+    private final ActionMode.Callback actionModeCallback = new ActionMode.Callback() {
+        @Override
+        public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+            getMenuInflater().inflate(R.menu.menu_multi_select, menu);
+            return true;
+        }
+
+        @Override
+        public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+            // Optionally update menu items here
+            return false;
+        }
+
+        @Override
+        public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+            int id = item.getItemId();
+            if (id == R.id.action_delete_selected) {
+                deleteSelectedTasks();
+                mode.finish();
+                return true;
+            } else if (id == R.id.action_mark_done) {
+                markSelectedDone();
+                mode.finish();
+                return true;
+            }
+            return false;
+        }
+
+        @Override
+        public void onDestroyActionMode(ActionMode mode) {
+            disableMultiSelect();
+            actionMode = null;
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         prefs = getSharedPreferences("todo_prefs", MODE_PRIVATE);
@@ -163,6 +202,7 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
         taskList = loadTasks();
         adapter = new TaskAdapter(displayList, this::onTasksChanged, this::onTaskClicked);
         adapter.setOnTaskContextMenuListener(this);
+        adapter.setOnSelectionChangedListener(this::updateActionModeTitle);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
         
@@ -407,7 +447,7 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
                 
                 // Use specific notification method
                 if (position == newPosition) {
-                    adapter.notifyItemChanged(newPosition);
+                    adapter.notifyItemChanged(position);
                 } else {
                     // Handle moved item
                     adapter.notifyItemMoved(position, newPosition);
@@ -428,7 +468,7 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
         Snackbar.make(rootView, getString(R.string.dialog_task_deleted), Snackbar.LENGTH_LONG)
                 .setAction(getString(R.string.dialog_undo), v -> {
                     // Add back to the master list at the correct position
-                    if (recentlyDeletedTaskPosition >= 0 && recentlyDeletedTaskPosition <= taskList.size()) {
+                    if (recentlyDeletedTaskPosition >= 0 && recentlyDeletedTaskPosition < taskList.size()) {
                         taskList.add(recentlyDeletedTaskPosition, recentlyDeletedTask);
                     } else {
                         taskList.add(recentlyDeletedTask); // fallback
@@ -485,7 +525,7 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
     }
 
     private void sortTasksByPriority() {
-        taskList.sort(Comparator.comparingInt(a -> getPriorityValue(a.getPriority())));
+        taskList.sort((a, b) -> Integer.compare(getPriorityValue(a.getPriority()), getPriorityValue(b.getPriority())));
     }
 
     private int getPriorityValue(String priority) {
@@ -605,19 +645,30 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
     }
 
     // Bulk actions
+    private void updateActionModeTitle() {
+        if (actionMode != null) {
+            int count = adapter.getItemCount();
+            actionMode.setTitle(count + " selected");
+        }
+    }
+
     private void enableMultiSelect() {
-        adapter.setMultiSelectMode(true);
-        selectedPositions.clear();
+        adapter.setSelectedPositions(new ArrayList<>());
+        if (actionMode == null) {
+            actionMode = startSupportActionMode(actionModeCallback);
+        }
+        updateActionModeTitle();
         Toast.makeText(this, "Multi-select enabled. Tap tasks to select.", Toast.LENGTH_SHORT).show();
     }
 
     private void disableMultiSelect() {
-        adapter.setMultiSelectMode(false);
-        selectedPositions.clear();
-        // Use more specific notification instead of notifyDataSetChanged
-        for (int i = 0; i < adapter.getItemCount(); i++) {
-            adapter.notifyItemChanged(i);
+        adapter.setSelectedPositions(new ArrayList<>());
+        if (actionMode != null) {
+            actionMode.finish();
+            actionMode = null;
         }
+        // Use more specific notification instead of notifyDataSetChanged
+        adapter.notifyDataSetChanged();
     }
 
     // Export/Import
@@ -746,7 +797,7 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
                     int d = Integer.parseInt(parts[2]);
                     Calendar due = Calendar.getInstance();
                     due.set(y, m, d, 0, 0, 0);
-                    due.set(Calendar.MILLISECOND, 0);
+                    due.set(Calendar.DAY_OF_MONTH, 1);
                     if (!due.after(today)) {
                         hasDue = true;
                         overdueTasks++;
@@ -796,10 +847,10 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = "To-Do Reminders";
             String description = "Channel for To-Do reminders";
-            int importance = android.app.NotificationManager.IMPORTANCE_HIGH;
+            int importance = NotificationManager.IMPORTANCE_HIGH;
             NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
             channel.setDescription(description);
-            android.app.NotificationManager notificationManager = getSystemService(android.app.NotificationManager.class);
+            NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
             if (notificationManager != null) {
                 notificationManager.createNotificationChannel(channel);
             }
@@ -848,7 +899,11 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
                         .setAutoCancel(true);
                 NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
                 int notificationId = taskText.hashCode();
-                notificationManager.notify(notificationId, builder.build());
+                try {
+                    notificationManager.notify(notificationId, builder.build());
+                } catch (SecurityException e) {
+                    Log.e("ReminderReceiver", "Security exception: " + e.getMessage());
+                }
             } catch (SecurityException e) {
                 // Handle gracefully
                 Log.e("ReminderReceiver", "Cannot show notification: " + e.getMessage());
@@ -913,7 +968,6 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
         // Create dialog with floating notification layout
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         View dialogView = getLayoutInflater().inflate(R.layout.floating_notification, null);
-        builder.setView(dialogView);
         
         // Set up the RecyclerView
         RecyclerView recyclerView = dialogView.findViewById(R.id.notification_tasks_recycler);
@@ -954,7 +1008,7 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
         }
         
         // Sort by priority: High > Medium > Low
-        overdueTasks.sort(Comparator.comparingInt(a -> getPriorityValue(a.getPriority())));
+        overdueTasks.sort((a, b) -> Integer.compare(getPriorityValue(a.getPriority()), getPriorityValue(b.getPriority())));
         
         return overdueTasks;
     }
@@ -1084,7 +1138,6 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
             }
         }
 
-        adapter.clearSelection();
         disableMultiSelect();
         onTasksChanged();
         updateNotificationBadge(); // Ensure notification icon updates
@@ -1096,12 +1149,13 @@ public class MainActivity extends AppCompatActivity implements TaskAdapter.OnTas
         // Mark tasks as done and notify adapter
         for (Task task : toMark) {
             task.setDone(true);
-            adapter.notifyItemChanged(taskList.indexOf(task));
+            int position = taskList.indexOf(task);
+            adapter.notifyItemChanged(position);
         }
 
-        adapter.clearSelection();
         disableMultiSelect();
         onTasksChanged();
         updateNotificationBadge(); // Ensure notification icon updates
     }
 }
+

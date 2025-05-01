@@ -3,22 +3,23 @@ plugins {
 }
 
 android {
-    namespace 'com.example.exam'
-    compileSdk 35
+    namespace 'com.mamunwrites.todo'
+    compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.exam"
+        applicationId "com.mamunwrites.todo"
         minSdk 24
-        targetSdk 35
+        targetSdk 34
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -38,4 +39,5 @@ dependencies {
     androidTestImplementation libs.espresso.core
     implementation 'com.google.code.gson:gson:2.10.1'
     implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

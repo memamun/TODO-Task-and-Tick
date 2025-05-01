@@ -1,10 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">কাজের তালিকা</string>
     <string name="privacy_policy">গোপনীয়তা নীতি</string>
+    <string name="privacy_policy_title">গোপনীয়তা নীতি</string>
+    <string name="privacy_effective_date">কার্যকর তারিখ: ১ মে, ২০২৫</string>
+    <string name="privacy_intro">এই অ্যাপ ("কাজের তালিকা") আপনার গোপনীয়তা রক্ষার জন্য প্রতিশ্রুতিবদ্ধ। আপনার তথ্য কীভাবে পরিচালিত হয় তা জানতে নিচের নীতিমালা পড়ুন।</string>
+    
+    <string name="privacy_data_collection_title">তথ্য সংগ্রহ</string>
+    <string name="privacy_data_collection">• এই অ্যাপ কোনো ব্যক্তিগত তথ্য সংগ্রহ, সংরক্ষণ বা প্রেরণ করে না।\n• আপনার সব টাস্ক ও তথ্য শুধুমাত্র আপনার ডিভাইসে সংরক্ষিত থাকে।\n• কোনো অ্যানালিটিক্স, বিজ্ঞাপন বা তৃতীয় পক্ষের ট্র্যাকিং ব্যবহৃত হয় না।</string>
+    
+    <string name="privacy_permissions_title">অনুমতি</string>
+    <string name="privacy_permissions">• অ্যাপটি আপনাকে টাস্কের নোটিফিকেশন দিতে নোটিফিকেশন অনুমতি চাইতে পারে। এটি ঐচ্ছিক এবং শুধুমাত্র লোকাল নোটিফিকেশনের জন্য ব্যবহৃত হয়।\n• অন্য কোনো সংবেদনশীল অনুমতি প্রয়োজন হয় না বা ব্যবহৃত হয় না।</string>
+    
+    <string name="privacy_data_sharing_title">ডেটা শেয়ারিং</string>
+    <string name="privacy_data_sharing">• আপনার তথ্য কোনো তৃতীয় পক্ষের সাথে শেয়ার করা হয় না।\n• কোনো তথ্য আপলোড, বিক্রি বা ডিভাইসের বাইরে স্থানান্তর করা হয় না।</string>
+    
+    <string name="privacy_childrens_privacy_title">শিশুদের গোপনীয়তা</string>
+    <string name="privacy_childrens_privacy">• এই অ্যাপ সব বয়সের জন্য উপযুক্ত এবং ১৩ বছরের কম বয়সী শিশুদের কাছ থেকে তথ্য সংগ্রহ করে না।</string>
+    
+    <string name="privacy_security_title">নিরাপত্তা</string>
+    <string name="privacy_security">• আপনার তথ্য আপনার ডিভাইসে নিরাপদে সংরক্ষিত থাকে। অতিরিক্ত নিরাপত্তার জন্য ডিভাইসের পিন, ফিঙ্গারপ্রিন্ট ইত্যাদি ব্যবহার করার পরামর্শ দেওয়া হয়।\n• অতিরিক্ত নিরাপত্তার জন্য আপনার ডিভাইসের পিন, ফিঙ্গারপ্রিন্ট বা অন্যান্য নিরাপত্তা বৈশিষ্ট্য ব্যবহার করুন।</string>
+    
+    <string name="privacy_contact_title">যোগাযোগ</string>
+    <string name="privacy_contact">• এই গোপনীয়তা নীতি সম্পর্কে যদি আপনার কোনো প্রশ্ন বা উদ্বেগ থাকে, তাহলে অনুগ্রহ করে ডেভেলপারের সাথে যোগাযোগ করুন: support@mamunwrites.com</string>
+    
+    <string name="privacy_agreement">এই অ্যাপ ব্যবহার করে, আপনি এই গোপনীয়তা নীতিতে সম্মত হচ্ছেন। এই নীতি সময়ে সময়ে আপডেট করা হতে পারে। অনুগ্রহ করে নিয়মিত এটি পর্যালোচনা করুন।</string>
+    
+    <!-- Content descriptions for accessibility -->
+    <string name="content_desc_data_collection">তথ্য সংগ্রহ</string>
+    <string name="content_desc_permissions">অনুমতি</string>
+    <string name="content_desc_data_sharing">ডেটা শেয়ারিং</string>
+    <string name="content_desc_childrens_privacy">শিশুদের গোপনীয়তা</string>
+    <string name="content_desc_security">নিরাপত্তা</string>
+    <string name="content_desc_contact">যোগাযোগ</string>
+    <string name="email_chooser_title">ইমেইল পাঠানোর জন্য ব্যবহার করুন…</string>
+    
+    <string name="email_button">ইমেইল</string>
+    <string name="no_email_app">কোনো ইমেইল অ্যাপ পাওয়া যায়নি</string>
+    <string name="email_copied">ইমেইল ক্লিপবোর্ডে কপি করা হয়েছে</string>
+    
     <string name="developer_info">ডেভেলপার তথ্য</string>
     <string name="share_app">অ্যাপ শেয়ার করুন</string>
-    <string name="privacy_policy_text">কার্যকর তারিখ: ১ মে, ২০২৫\n\nএই অ্যাপ ("কাজের তালিকা") আপনার গোপনীয়তা রক্ষার জন্য প্রতিশ্রুতিবদ্ধ। আপনার তথ্য কীভাবে পরিচালিত হয় তা জানতে নিচের নীতিমালা পড়ুন।\n\n<b>১. তথ্য সংগ্রহ</b>\n• এই অ্যাপ কোনো ব্যক্তিগত তথ্য সংগ্রহ, সংরক্ষণ বা প্রেরণ করে না।\n• আপনার সব টাস্ক ও তথ্য শুধুমাত্র আপনার ডিভাইসে সংরক্ষিত থাকে।\n• কোনো অ্যানালিটিক্স, বিজ্ঞাপন বা তৃতীয় পক্ষের ট্র্যাকিং ব্যবহৃত হয় না।\n\n<b>২. অনুমতি</b>\n• অ্যাপটি আপনাকে টাস্কের নোটিফিকেশন দিতে নোটিফিকেশন অনুমতি চাইতে পারে। এটি ঐচ্ছিক এবং শুধুমাত্র লোকাল নোটিফিকেশনের জন্য ব্যবহৃত হয়।\n• অন্য কোনো সংবেদনশীল অনুমতি প্রয়োজন হয় না বা ব্যবহৃত হয় না।\n\n<b>৩. তথ্য শেয়ারিং</b>\n• আপনার তথ্য কোনো তৃতীয় পক্ষের সাথে শেয়ার করা হয় না।\n• কোনো তথ্য আপলোড, বিক্রি বা ডিভাইসের বাইরে স্থানান্তর করা হয় না।\n\n<b>৪. শিশুদের গোপনীয়তা</b>\n• এই অ্যাপ সব বয়সের জন্য উপযুক্ত এবং ১৩ বছরের কম বয়সী শিশুদের কাছ থেকে তথ্য সংগ্রহ করে না।\n\n<b>৫. নিরাপত্তা</b>\n• আপনার তথ্য আপনার ডিভাইসে নিরাপদে সংরক্ষিত থাকে। অতিরিক্ত নিরাপত্তার জন্য ডিভাইসের পিন, ফিঙ্গারপ্রিন্ট ইত্যাদি ব্যবহার করার পরামর্শ দেওয়া হয়।\n\n<b>৬. যোগাযোগ</b>\n• এই গোপনীয়তা নীতি সম্পর্কে কোনো প্রশ্ন বা উদ্বেগ থাকলে, দয়া করে ডেভেলপারকে <b>support@mamunwrites.com</b> এ ইমেইল করুন।\n\nএই অ্যাপ ব্যবহার করে আপনি এই গোপনীয়তা নীতিতে সম্মত হচ্ছেন। নীতিমালা সময়ে সময়ে আপডেট হতে পারে। দয়া করে নিয়মিত পর্যালোচনা করুন।</string>
-    <string name="developer_info_text"><b>অ্যাপ</b>: কাজের তালিকা\n<b>ডেভেলপার</b>: মামুন আবদুল্লাহ\n<b>পদবী</b>: অ্যান্ড্রয়েড ডেভেলপার\n<b>ইমেইল</b>: support@mamunwrites.com\n<b>ওয়েবসাইট</b>: https://mamunwrites.com\n\n<b>সহায়তা ও মতামত:</b>\n• সহায়তা, ফিচার রিকোয়েস্ট বা বাগ রিপোর্টের জন্য উপরের ইমেইল বা ওয়েবসাইটে যোগাযোগ করুন।\n• আমরা আপনার গোপনীয়তা ও মতামতকে গুরুত্ব দিই!\n\nকাজের তালিকা ব্যবহারের জন্য ধন্যবাদ!</string>
     <string name="share_app_text">এই টু-ডু অ্যাপটি ব্যবহার করে দেখুন!</string>
     <string name="notifications">নোটিফিকেশন</string>
     <string name="night_mode">নাইট মোড</string>
@@ -58,4 +94,19 @@
     <!-- Task dialog labels -->
     <string name="category_label">বিভাগ</string>
     <string name="priority_label">অগ্রাধিকার</string>
+    
+    <!-- Developer info page -->
+    <string name="developer_name">মামুন আবদুল্লাহ</string>
+    <string name="developer_title">অ্যান্ড্রয়েড ডেভেলপার</string>
+    <string name="app_info_title">অ্যাপ তথ্য</string>
+    <string name="app_name_with_desc">কাজের তালিকা - টাস্ক ম্যানেজার</string>
+    <string name="app_description">একটি আধুনিক, ব্যবহারে সহজ টাস্ক ম্যানেজমেন্ট অ্যাপ যা আপনাকে সংগঠিত ও উৎপাদনশীল থাকতে সাহায্য করে। বৈশিষ্ট্যগুলোর মধ্যে রয়েছে টাস্ক ক্যাটাগরি, অগ্রাধিকার, শেষ তারিখ, এবং নোটিফিকেশন।</string>
+    <string name="support_feedback_title">সহায়তা ও মতামত</string>
+    <string name="support_info">সহায়তা, নতুন বৈশিষ্ট্য অনুরোধ, বা বাগ রিপোর্ট করার জন্য, অনুগ্রহ করে ইমেইল মাধ্যমে আমাদের সাথে যোগাযোগ করুন। আমরা আপনার গোপনীয়তা এবং মতামত মূল্যায়ন করি!</string>
+    <string name="website_button">ওয়েবসাইট</string>
+    <string name="feedback_button">মতামত পাঠান</string>
+    <string name="thanks_message">কাজের তালিকা ব্যবহার করার জন্য ধন্যবাদ!</string>
+    <string name="email_subject">কাজের তালিকা অ্যাপ সম্পর্কে</string>
+    <string name="feedback_subject">মতামত: কাজের তালিকা অ্যাপ</string>
+    <string name="feedback_text">আমি কাজের তালিকা অ্যাপ সম্পর্কে নিম্নলিখিত মতামত দিতে চাই:\n\n</string>
 </resources> 

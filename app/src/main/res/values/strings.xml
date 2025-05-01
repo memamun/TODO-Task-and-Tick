@@ -12,6 +12,52 @@
     <string name="share_app">Share App</string>
     <string name="privacy_policy_text">Effective Date: May 1, 2025\n\nThis application ("TODO") is committed to protecting your privacy. Please read this policy to understand how your information is handled.\n\n<b>1. Information Collection</b>\n• This app does not collect, store, or transmit any personal data.\n• All tasks and data are stored locally on your device only.\n• No analytics, ads, or third-party tracking are used.\n\n<b>2. Permissions</b>\n• The app may request notification permission to provide you with task reminders. This is optional and only used for local notifications.\n• No other sensitive permissions are required or used.\n\n<b>3. Data Sharing</b>\n• Your data is not shared with any third parties.\n• No data is uploaded, sold, or transferred outside of your device.\n\n<b>4. Children\'s Privacy</b>\n• This app is suitable for all ages and does not collect information from children under 13.\n\n<b>5. Security</b>\n• Your data is securely stored on your device. For additional security, use your device\'s PIN, fingerprint, or other security features.\n\n<b>6. Contact</b>\n• If you have any questions or concerns about this privacy policy, please contact the developer at <b>support@mamunwrites.com</b>.\n\nBy using this app, you agree to this privacy policy. The policy may be updated from time to time. Please review it periodically.</string>
     <string name="developer_info_text"><b>App</b>: TODO\n<b>Developer</b>: Mamun Abdullah\n<b>Title</b>: Android Developer\n<b>Email</b>: support@mamunwrites.com\n<b>Website</b>: https://mamunwrites.com\n\n<b>Support &amp; Feedback:</b>\n• For support, feature requests, or bug reports, please contact us via the email or website above.\n• We value your privacy and feedback!\n\nThanks for using TODO!</string>
+    
+    <!-- Developer info page -->
+    <string name="developer_name">Mamun Abdullah</string>
+    <string name="developer_title">Android Developer</string>
+    <string name="app_info_title">App Information</string>
+    <string name="app_name_with_desc">TODO - Task Manager</string>
+    <string name="app_description">A modern, easy-to-use task management app to help you stay organized and productive. Features include task categories, priorities, due dates, and notifications.</string>
+    <string name="support_feedback_title">Support &amp; Feedback</string>
+    <string name="support_info">For support, feature requests, or bug reports, please contact us via email. We value your privacy and feedback!</string>
+    <string name="email_button">Email</string>
+    <string name="website_button">Website</string>
+    <string name="feedback_button">Send Feedback</string>
+    <string name="thanks_message">Thanks for using TODO!</string>
+    <string name="email_subject">Regarding TODO App</string>
+    <string name="feedback_subject">Feedback: TODO App</string>
+    <string name="feedback_text">I would like to provide the following feedback about the TODO app:\n\n</string>
+    <string name="no_email_app">No email app found</string>
+    <string name="email_copied">Email copied to clipboard</string>
+    
+    <!-- Privacy policy page -->
+    <string name="privacy_policy_title">Privacy Policy</string>
+    <string name="privacy_effective_date">Effective Date: May 1, 2025</string>
+    <string name="privacy_intro">This application ("TODO") is committed to protecting your privacy. Please read this policy to understand how your information is handled.</string>
+    <string name="privacy_data_collection_title">Data Collection</string>
+    <string name="privacy_data_collection">• This app does not collect, store, or transmit any personal data.\n• All tasks and data are stored locally on your device only.\n• No analytics, ads, or third-party tracking are used.</string>
+    <string name="privacy_permissions_title">Permissions</string>
+    <string name="privacy_permissions">• The app may request notification permission to provide you with task reminders. This is optional and only used for local notifications.\n• No other sensitive permissions are required or used.</string>
+    <string name="privacy_data_sharing_title">Data Sharing</string>
+    <string name="privacy_data_sharing">• Your data is not shared with any third parties.\n• No data is uploaded, sold, or transferred outside of your device.</string>
+    <string name="privacy_childrens_privacy_title">Children\'s Privacy</string>
+    <string name="privacy_childrens_privacy">• This app is suitable for all ages and does not collect information from children under 13.</string>
+    <string name="privacy_security_title">Security</string>
+    <string name="privacy_security">• Your data is securely stored on your device.\n• For additional security, use your device\'s PIN, fingerprint, or other security features.</string>
+    <string name="privacy_contact_title">Contact</string>
+    <string name="privacy_contact">• If you have any questions or concerns about this privacy policy, please contact the developer at support@mamunwrites.com.</string>
+    <string name="privacy_agreement">By using this app, you agree to this privacy policy. The policy may be updated from time to time. Please review it periodically.</string>
+    
+    <!-- Content descriptions for accessibility -->
+    <string name="content_desc_data_collection">Data Collection</string>
+    <string name="content_desc_permissions">Permissions</string>
+    <string name="content_desc_data_sharing">Data Sharing</string>
+    <string name="content_desc_childrens_privacy">Children\'s Privacy</string>
+    <string name="content_desc_security">Security</string>
+    <string name="content_desc_contact">Contact</string>
+    <string name="email_chooser_title">Send email using…</string>
+    
     <string name="share_app_text">Check out this To-Do app!</string>
     <string name="notifications">Notifications</string>
     <string name="night_mode">Night Mode</string>

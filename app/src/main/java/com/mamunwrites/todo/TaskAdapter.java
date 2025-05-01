@@ -1,4 +1,6 @@
-package com.example.exam;
+package com.mamunwrites.todo;
+
+import com.mamunwrites.todo.R;
 
 import android.content.Context;
 import android.graphics.Paint;
@@ -38,6 +40,14 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
 
     public void setOnTaskContextMenuListener(OnTaskContextMenuListener listener) {
         this.contextMenuListener = listener;
+    }
+
+    public interface OnSelectionChangedListener {
+        void onSelectionChanged();
+    }
+    private OnSelectionChangedListener selectionChangedListener;
+    public void setOnSelectionChangedListener(OnSelectionChangedListener listener) {
+        this.selectionChangedListener = listener;
     }
 
     public TaskAdapter(List<Task> tasks, Runnable onTasksChanged, OnTaskClickListener onTaskClickListener) {
@@ -95,6 +105,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
                     selectedPositions.add(position);
                     notifyItemChanged(position);
                 }
+                if (selectionChangedListener != null) selectionChangedListener.onSelectionChanged();
             } else if (onTaskClickListener != null) {
                 onTaskClickListener.onTaskClick(position);
             }
@@ -278,3 +289,4 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
         }
     }
 } 
+
